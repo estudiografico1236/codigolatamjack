@@ -1,0 +1,324 @@
+*{  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+body{
+     font-family: 'Lato', sans-serif;
+     font-size: 20px;
+     color: #1a1b1b;
+     line-height: 1.2;
+     background-color: #f3f3f3;
+
+     min-height: 100vh;
+}
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;/* Asegura que el header esté por encima del contenido siguiente */
+    background-color: #f39913;
+    color: #ececec;
+    font-size:30px;
+    box-shadow: 5px 5px 4px #d3cfcf;
+    cursor: pointer;
+}
+body.modo_oscuro #menu{
+    background-color: #f8f8f8;
+    color: #e7e4e4;
+}
+header{
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    padding: 16px;
+    width: 10%;
+    display: flex; 
+    align-items: center;
+    color: #d6dad7;
+}
+header img{
+    margin-right: auto;
+    margin-left: auto;
+    border-radius:100%;
+    width: 80px;
+    box-shadow: 2px 4px 4px #494949;
+}
+#menu_boton{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 60px;
+    width: 85px;
+    height: 85px;
+    color: #d4d6d5;
+    cursor: pointer;
+}
+body.modo_oscuro #menu_boton{
+    color: #706f6f;
+}
+i#close_menu{
+    display: none;
+}
+nav{
+    display: none;
+    float: right;
+}
+body.mobile_menu_active{
+    overflow: hidden;
+}
+body.mobile_menu_active i#close_menu{
+    display: block;
+}
+body.mobile_menu_active i#open_menu{
+    display: none;
+}
+body.mobile_menu_active header{
+    height: 51vh;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    transition: height 0.3s;
+    font-size: 40px;
+    
+}
+body.mobile_menu_active nav{
+    display: block;
+    width: 100%;
+    height: 50%;
+}
+body.mobile_menu_active ul#lista{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+header ul{
+    display: flex; /*Contenedor de la lista*/
+    margin-left: auto;  
+    
+}
+header ul li{
+    margin-left: 30px;
+    box-shadow: 0px 2px 4px;
+    background-color: #3e3f3f;
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+#modo_oscuro_btn{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 60px;
+    width: 85px;
+    height: 85px;
+}
+body.modo_oscuro #modo-oscuro{
+    display: none;
+}
+body:not(.modo_oscuro) #modo-claro{
+    display: none;
+}
+body.modo_oscuro{
+    background: radial-gradient(circle,#141F1E,#303031);
+    color:#53514c
+}
+#inicio{
+    border:none; 
+    height: 4px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+#inicio{
+    margin-bottom: 100px;
+}
+.foto_perfil{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#Hola{
+    border-color: transparent;
+    height: 0;
+}
+.hola{
+    justify-content: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #34353d ;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+   color: #565858;
+}
+body.modo_oscuro .soy{
+    color: #c4c4c4;
+}
+.parrafo1{
+    justify-content: space-between;
+    border: none;
+    color: #1D2624;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+body.modo_oscuro .parrafo1{
+        color: #c4c4c4;
+    }
+.Contenedor_boton{
+    text-align: center;
+}
+.boton_descarga{
+    display: inline-block;
+    background-color: #e09b23;
+    border-radius:none;
+    color: #1D2624;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 35px;
+    margin-bottom: 20px;
+    box-shadow: 6px 5px 4px #494949;
+}
+body.modo_oscuro .boton_descarga{
+    background-color:  #c2c2c2;
+    color: #0a0a0a;
+}
+h2{
+    font-size: 30px;
+}
+#Hablemos{
+    border-color: transparent;
+    height: 0;
+}
+.hablemos{
+    justify-content: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #E5CDA4;
+    border: none;
+    color: #1D2624;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 2px 5px 4px #494949;
+}
+body.modo_oscuro .hablemos{
+    background-color: #e09b23;
+    color: #000000;
+}
+#Contacto{
+    border-color: transparent;
+}
+.botones_link_IMG{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    padding: 16px;
+    width: 10%;
+    display: flex; 
+    align-items: center;
+}
+.github{
+    font-size: 50px;
+    margin-right: 20px;
+    color: #1D2624;
+}
+body.modo_oscuro .github{
+    color: #e09b23;;
+}
+.Mail{
+    font-size: 50px;
+    margin-right: 20px;
+    color:#1D2624;
+}
+body.modo_oscuro .Mail{
+    color: #e09b23;;
+}
+.link{
+    font-size: 50px;
+    color: #1D2624;
+}
+body.modo_oscuro .link{
+    color: #e09b23;;
+}
+footer{
+    background-color: #4f504f;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px;
+}
+body.modo_oscuro footer{
+background-color: #e09b23;;
+    color: #131313;
+}
+@media (min-width:1024px){
+#Inicio{
+    display: flex;   
+}
+.github{
+    font-size: 100px;
+    margin-right: 100px;
+    margin-top: 200px;
+}
+.Mail{
+    font-size: 100px;
+    margin-right: 100px;
+    margin-top: 200px;
+}
+.link{
+    font-size: 100px;
+    margin-top: 200px;
+}
+footer{
+    margin-top: 300px;
+}
+#menu_boton{
+    display: none;
+}
+nav{
+    display: block;
+}
+}
